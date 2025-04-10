@@ -11,10 +11,12 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@Column(nullable = false)
 	private	String	name;
 
 	private String description;
 
+	@Column(nullable = false)
 	private BigDecimal price;
 
 	private Integer stock_quantity;
@@ -27,7 +29,15 @@ public class Product {
 
 	private LocalDateTime updated_at;
 
-	public Product() {
+	protected Product() {
+	}
+
+	public Product(String name, BigDecimal price, Long category_id) {
+		this.name = name;
+		this.price = price;
+		this.category_id = category_id;
+		this.created_at = LocalDateTime.now();
+		this.updated_at = LocalDateTime.now();
 	}
 
 	public Long getId() {

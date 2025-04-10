@@ -12,11 +12,13 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@Column(nullable = false)
 	private String name;
 
 	@Column(unique = true, nullable = false)
 	private String email;
 
+	@Column(nullable = false)
 	private String password;
 
 	@Enumerated(EnumType.STRING)
@@ -26,7 +28,16 @@ public class User {
 
 	private LocalDateTime updated_at;
 
-	public User() {
+	protected User() {
+	}
+
+	public User(String name, String email, String password, UserRole role) {
+		this.name = name;
+		this.email = email;
+		this.password = password;
+		this.role = role;
+		this.created_at = LocalDateTime.now();
+		this.updated_at = LocalDateTime.now();
 	}
 
 	public Long getId() {
