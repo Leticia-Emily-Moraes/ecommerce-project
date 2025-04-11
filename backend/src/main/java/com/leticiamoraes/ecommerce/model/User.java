@@ -31,11 +31,11 @@ public class User {
 	protected User() {
 	}
 
-	public User(String name, String email, String password, UserRole role) {
-		this.name = name;
-		this.email = email;
-		this.password = password;
-		this.role = role;
+	public User(String pName, String pEmail, String pPassword, UserRole pRole) {
+		this.name = pName;
+		this.email = pEmail;
+		this.password = pPassword;
+		this.role = pRole;
 		this.created_at = LocalDateTime.now();
 		this.updated_at = LocalDateTime.now();
 	}
@@ -52,47 +52,47 @@ public class User {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String pName) {
+		this.name = pName;
 	}
 
 	public String getEmail() {
 		return email;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmail(String pEmail) {
+		this.email = pEmail;
 	}
 
 	public String getPassword() {
 		return password;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPassword(String pPassword) {
+		this.password = pPassword;
 	}
 
 	public UserRole getRole() {
 		return role;
 	}
 
-	public void setRole(UserRole role) {
-		this.role = role;
+	public void setRole(UserRole pRole) {
+		this.role = pRole;
 	}
 
 	public LocalDateTime getCreated_at() {
 		return created_at;
 	}
 
-	public void setCreated_at(LocalDateTime created_at) {
-		this.created_at = created_at;
+	public void setCreated_at(LocalDateTime pCreated_at) {
+		this.created_at = pCreated_at;
 	}
 
 	public LocalDateTime getUpdated_at() {
 		return updated_at;
 	}
 
-	public void setUpdated_at(LocalDateTime updated_at) {
-		this.updated_at = updated_at;
+	public void setUpdated_at(LocalDateTime pUpdated_at) {
+		this.updated_at = pUpdated_at;
 	}
 }

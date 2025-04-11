@@ -32,10 +32,10 @@ public class Product {
 	protected Product() {
 	}
 
-	public Product(String name, BigDecimal price, Long category_id) {
-		this.name = name;
-		this.price = price;
-		this.category_id = category_id;
+	public Product(String pName, BigDecimal pPrice, Long pCategory_id) {
+		this.name = pName;
+		this.price = pPrice;
+		this.category_id = pCategory_id;
 		this.created_at = LocalDateTime.now();
 		this.updated_at = LocalDateTime.now();
 	}
@@ -44,63 +44,63 @@ public class Product {
 		return id;
 	}
 
-	protected void setId(Long id) {
-		this.id = id;
-	}
-
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	protected void setId(Long id) {
+		this.id = id;
+	}
+
+	public void setName(String pName) {
+		this.name = pName;
 	}
 
 	public String getDescription() {
 		return description;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setDescription(String pDescription) {
+		this.description = pDescription;
 	}
 
 	public BigDecimal getPrice() {
 		return price;
 	}
 
-	public void setPrice(BigDecimal price) {
-		this.price = price;
+	public void setPrice(BigDecimal pPrice) {
+		this.price = pPrice;
 	}
 
 	public Integer getStock_quantity() {
 		return stock_quantity;
 	}
 
-	public void setStock_quantity(Integer stock_quantity) {
-		this.stock_quantity = stock_quantity;
+	public void setStock_quantity(Integer pStock_quantity) {
+		this.stock_quantity = pStock_quantity;
 	}
 
 	public Long getCategory_id() {
 		return category_id;
 	}
 
-	public void setCategory_id(Long category_id) {
-		this.category_id = category_id;
+	public void setCategory_id(Long pCategory_id) {
+		this.category_id = pCategory_id;
 	}
 
 	public LocalDateTime getCreated_at() {
 		return created_at;
 	}
 
-	public void setCreated_at(LocalDateTime created_at) {
-		this.created_at = created_at;
+	public void setCreated_at(LocalDateTime pCreated_at) {
+		this.created_at = pCreated_at;
 	}
 
 	public LocalDateTime getUpdated_at() {
 		return updated_at;
 	}
 
-	public void setUpdated_at(LocalDateTime updated_at) {
-		this.updated_at = updated_at;
+	public void setUpdated_at(LocalDateTime pUpdated_at) {
+		this.updated_at = pUpdated_at;
 	}
 }
