@@ -21,9 +21,9 @@ public class Product {
 
 	private Integer stock_quantity;
 
-	@ManyToOne
-	@JoinColumn(name = "categoria_id", nullable = false)
-	private	Long category_id;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "category_id", nullable = false)
+	private	Category category;
 
 	private LocalDateTime created_at;
 
