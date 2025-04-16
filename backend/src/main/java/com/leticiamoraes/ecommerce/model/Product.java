@@ -32,10 +32,10 @@ public class Product {
 	protected Product() {
 	}
 
-	public Product(String pName, BigDecimal pPrice, Long pCategory_id) {
+	public Product(String pName, BigDecimal pPrice, Category pCategory) {
 		this.name = pName;
 		this.price = pPrice;
-		this.category_id = pCategory_id;
+		this.category = pCategory;
 		this.created_at = LocalDateTime.now();
 		this.updated_at = LocalDateTime.now();
 	}
@@ -80,12 +80,12 @@ public class Product {
 		this.stock_quantity = pStock_quantity;
 	}
 
-	public Long getCategory_id() {
-		return category_id;
+	public Category getCategory() {
+		return category;
 	}
 
-	public void setCategory_id(Long pCategory_id) {
-		this.category_id = pCategory_id;
+	public void setCategory(Category pCategory) {
+		this.category = pCategory;
 	}
 
 	public LocalDateTime getCreated_at() {
